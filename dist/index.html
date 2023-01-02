@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap w/ Webpack</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+<div class="container d-flex justify-content-center mt-100 mb-100 products">
+    <div class="row">
+        <div class="col-6 col-md-4">
+            <div class="card row">
+                <div class="labels">
+                    <label class="sale">-33%</label>
+                    <label class="new">New!</label>
+                </div>
+                <div class="card-body">
+                    <div class="card-img-actions">
+                        <img src="./img/goods-1.jpg" class="card-img img-fluid" alt="">
+                        <span class="like">
+                            <i class="icon-no-hover fa-regular fa-heart"></i>
+                            <i class="icon-hover fa-solid fa-heart"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="card-content">
+                        <p class="category">T-shirt</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin amet, arcu eget lacus augue ut.</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="stock"><i class="fa-solid fa-circle-check"></i> In stock</p>
+                    </div>
+                    <div class="price-block">
+                        <div class="price">15,95€</div>
+                        <div class="old-price">21,95€</div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <button type="button" class="btn btn-buy">Buy</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="card row">
+                <div class="labels">
+                    <label class="new">New!</label>
+                </div>
+                <div class="card-body">
+                    <div class="card-img-actions">
+                        <img src="./img/goods-2.jpg" class="card-img img-fluid" alt="">
+                        <span class="like">
+                            <i class="icon-no-hover fa-regular fa-heart"></i>
+                            <i class="icon-hover fa-solid fa-heart"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="card-content">
+                        <p class="category">T-shirt</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="stock"><i class="fa-solid fa-circle-check"></i> In stock</p>
+                    </div>
+                    <div class="price-block">
+                        <div class="price">20,95€</div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <button type="button" class="btn btn-buy">Buy</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="card row">
+                <div class="labels">
+                    <label class="sale">-33%</label>
+                    <label class="new">New!</label>
+                </div>
+                <div class="card-body">
+                    <div class="card-img-actions">
+                        <img src="./img/goods-3.jpg" class="card-img img-fluid" alt="">
+                        <span class="like">
+                            <i class="icon-no-hover fa-regular fa-heart"></i>
+                            <i class="icon-hover fa-solid fa-heart"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="card-content">
+                        <p class="category">Pants</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="stock"><i class="fa-solid fa-circle-check"></i> In stock</p>
+                    </div>
+                    <div class="price-block">
+                        <div class="price">130,95€</div>
+                        <div class="old-price">160,95€</div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <button type="button" class="btn btn-buy">Buy</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="card row">
+                <div class="labels">
+                    <label class="new">New!</label>
+                </div>
+                <div class="card-body">
+                    <div class="card-img-actions">
+                        <img src="./img/goods-4.jpg" class="card-img img-fluid" alt="">
+                        <span class="like">
+                            <i class="icon-no-hover fa-regular fa-heart"></i>
+                            <i class="icon-hover fa-solid fa-heart"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="card-content">
+                        <p class="category">Hat</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="stock"><i class="fa-solid fa-circle-check"></i> In stock</p>
+                    </div>
+                    <div class="price-block">
+                        <div class="price">19000,95€</div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <button type="button" class="btn btn-buy">Buy</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="card out-of-stock row">
+                <div class="card-body">
+                    <div class="card-img-actions">
+                        <img src="./img/goods-5.jpg" class="card-img img-fluid" alt="">
+                        <span class="like">
+                            <i class="icon-no-hover fa-regular fa-heart"></i>
+                            <i class="icon-hover fa-solid fa-heart"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="card-content">
+                        <p class="category">T-shirt</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="stock"><i class="fa-solid fa-circle-xmark"></i> Out of stock</p>
+                    </div>
+                    <div class="price-block">
+                        <div class="price">187,95€</div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <button type="button" disabled class="btn btn-buy">Buy</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-4">
+            <div class="card row">
+                <div class="labels">
+                    <label class="sale">-33%</label>
+                    <label class="new">New!</label>
+                </div>
+                <div class="card-body">
+                    <div class="card-img-actions">
+                        <img src="./img/goods-6.jpg" class="card-img img-fluid" alt="">
+                        <span class="like">
+                            <i class="icon-no-hover fa-regular fa-heart"></i>
+                            <i class="icon-hover fa-solid fa-heart"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="card-content">
+                        <p class="category">T-shirt</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="description">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="stock"><i class="fa-solid fa-circle-check"></i> In stock</p>
+                    </div>
+                    <div class="price-block">
+                        <div class="price">15,95€</div>
+                        <div class="old-price">21,95€</div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <button type="button" class="btn btn-buy">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+@import "~bootstrap/scss/bootstrap";
+
+$background: #FFFFFF;
+$borderCard: 1px solid #EEEEEE;
+$textColor: #444444;
+$cardPadding: 10px;
+$buyPadding: 16px;
+$marginBottom10px: 10px;
+$buyColor: #0070D8;
+$elementColor: #777777;
+
+$largeFontsize: 24px;
+$lagreLineHeight: 29px;
+
+$middleFontSize: 18px;
+$middleLineHeight: 22px;
+
+$normalFontSize: 15px;
+$normalLineHeight: 18px;
+
+$fontSize: 14px;
+$lineHeight: 17px;
+
+$smallFontSize: 12px;
+$smallLineHeight: 15px;
+
+$extraSmallFontSize: 10px;
+$extraSmallLineHeight: 12px;
+
+$boldFont: 700;
+$middleFont: 500;
+$normalFont: 400;
+
+$matgin100px: 100px;
+$outOfStockColor: #BCBCBC;
+
+$likePosition: 20px;
+$smallLikePosition: 10px;
+
+$labelPaddings: 8px 12px;
+$smallLabelPaddings: 4px;
+
+$descriptionHeight: 50px;
+$smallDescriptionHeight: 34px;
+
+$conteinerMaxWidht: 848px;
+
+$sizes: ("xs":320px, "sm":576px, "md":768px, "lg":992px, "xl":1200px);
+
+@mixin media($minmax, $media) {
+    @each $size, $resolution in $sizes {
+        @if $media == $size {
+            @media only screen and (#{$minmax}-width: $resolution) {
+                @content;
+            }
+        }
+    }
+}
+
+body {
+    font-family: 'Inter';
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .mt-100 {
+        margin-top: $matgin100px;
+    }
+    
+    .mb-100 {
+        margin-bottom: $matgin100px;
+    }
+
+    .container.products {
+        max-width: $conteinerMaxWidht;
+    }
+
+    .card {
+        border-radius: 0;
+        border: $borderCard;
+        transition: box-shadow .3s;
+        position: relative;
+
+        .labels {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            font-weight: $boldFont;
+            font-size: $middleFontSize;
+            line-height: $middleLineHeight;
+            text-transform: uppercase;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 100px;
+
+            label {
+                padding: $labelPaddings;
+                background-color: $background;
+                margin-bottom: $marginBottom10px;
+                box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.15);
+
+                @include media("max", "sm") {
+                    padding: $smallLabelPaddings;
+                }
+            }
+
+            .sale {
+                color: #E13209;
+            }
+
+            .new {
+                color: #0070D8;
+                font-size: $fontSize;
+                line-height: $fontSize;
+
+                @include media("max", "sm") {
+                    font-size: $extraSmallFontSize;
+                    line-height: $extraSmallLineHeight;
+                }
+            }
+
+            @include media("max", "sm") {
+                font-size: $fontSize;
+                line-height: $lineHeight;
+            }
+        }
+    
+        .card-body {
+            padding: $cardPadding;
+
+            .card-content {
+                margin-bottom: $marginBottom10px;
+
+                .category {
+                    font-size: $smallFontSize;
+                    line-height: $smallLineHeight;
+                    color: $elementColor;
+
+                    @include media("max", "sm") {
+                        font-size: $extraSmallFontSize;
+                        line-height: $extraSmallLineHeight;
+                    }
+                }
+
+                .description {
+                    font-size: $fontSize;
+                    line-height: $lineHeight;
+                    font-weight: $middleFont;
+                    height: $descriptionHeight;
+                    overflow: hidden;
+
+                    @include media("max", "sm") {
+                        height: $smallDescriptionHeight;
+                    }
+                }
+
+                .stock {
+                    font-size: $smallFontSize;
+                    line-height: $smallLineHeight;
+                    font-weight: $boldFont;
+
+                    .fa-circle-check {
+                        color: #47BC00;
+                    }
+        
+                    .fa-circle-xmark {
+                        color: #E13209;
+                    }
+                }
+            }
+        }
+
+        .card-img-actions {
+            position: relative;
+        
+            .like {
+                position: absolute;
+                top: $likePosition;
+                right: $likePosition;
+                line-height: $largeFontsize;
+                color: $textColor;
+                font-size: $largeFontsize;
+                cursor: pointer;
+
+                .icon-no-hover {
+                    display: inline;
+                }
+                .icon-hover {
+                    display: none;
+                }
+
+                &:hover {
+                    .icon-hover {
+                        display: inline;
+                    }
+                    .icon-no-hover {
+                        display: none;
+                    }
+                }
+
+                @include media("max", "sm") {
+                    top: $smallLikePosition;
+                    right: $smallLikePosition;
+                }
+            }
+        }
+
+        .price-block {
+            position: relative;
+    
+            .price {
+                font-size: $largeFontsize;
+                line-height: $lagreLineHeight;
+                font-weight: $boldFont;
+                
+                @include media("max", "sm") {
+                    font-size: $middleFontSize;
+                    line-height: $middleLineHeight;
+                }
+            }
+    
+            .old-price {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                font-size: $normalFontSize;
+                line-height: $normalLineHeight;
+                font-weight: $normalFont;
+                color: $elementColor;
+                text-decoration: line-through;
+
+                @include media("max", "sm") {
+                    font-size: $extraSmallFontSize;
+                    line-height: $extraSmallLineHeight;
+                }
+            }
+        }
+    
+        .btn-buy {
+            color: $buyColor;
+            text-transform: uppercase;
+            border: 2px solid $buyColor;
+            border-radius: 0;
+            width: 100%;
+            font-size: $fontSize;
+            line-height: $lineHeight;
+            font-weight: $boldFont;
+            padding: $buyPadding;
+
+            &:hover {
+                color: $background;
+                background-color: $buyColor;
+            }
+
+            @include media("max", "sm") {
+                padding: $cardPadding;
+                margin-bottom: $marginBottom10px;
+            }
+        }
+    
+        &:hover {
+            box-shadow: 0 0 11px rgba(33,33,33,.2);
+            z-index: 2;
+        }
+
+        &.out-of-stock {
+            .price-block {
+                .price {
+                    color: $outOfStockColor;
+                }
+            }
+            .btn-buy {
+                color: $outOfStockColor;
+                border: 2px solid $outOfStockColor;
+                cursor: default;
+
+                &:hover {
+                    color: $outOfStockColor;
+                    background-color: $background;
+                }
+            }
+        }
+    }
+}
